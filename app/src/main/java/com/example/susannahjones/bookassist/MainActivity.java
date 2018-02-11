@@ -23,8 +23,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onGButtonClick (View view) {
-        Intent intent = new Intent(this, GoogleBookResultsActivity.class);
-        startActivity(intent);
-    }
 }
