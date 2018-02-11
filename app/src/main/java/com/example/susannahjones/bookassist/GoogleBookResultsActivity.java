@@ -5,11 +5,7 @@ package com.example.susannahjones.bookassist;
  */
 
 import android.app.Activity;
-import android.app.SearchManager;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
 
 public class GoogleBookResultsActivity extends Activity {
 
@@ -22,3 +18,4 @@ public class GoogleBookResultsActivity extends Activity {
     }
 
 }
+
