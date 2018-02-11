@@ -1,30 +1,50 @@
 package com.example.susannahjones.bookassist;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
+
+
+
 
 /**
  * Created by susannahjones on 2/11/18.
  */
 
 public class bookTwoActivity extends AppCompatActivity {
-
+    private String urlString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_two);
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // ImageView myImageView = (ImageView) findViewById(R.id.my_main_image);
-        //   myImageView.setImageResource(R.drawable.library);
     }
-
-
     public void onButtonClick (View view) {
-        Intent intent = new Intent(this, CameraActivity.class);
-        startActivity(intent);
+        urlString = "https://g.co/kgs/Jzz8Jp";
+        Uri uri = Uri.parse(urlString);
+        Intent uIntent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(uIntent);
     }
+
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+
 
 }

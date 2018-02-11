@@ -73,15 +73,18 @@ public class CameraActivity extends Activity implements View.OnClickListener {
                     }
                     if (barcodeValue.getText().equals("00002")) {
                         //new activity - critical play
-                        System.out.println("critical play");
+                        Intent intent = new Intent(this, bookTwoActivity.class);
+                        startActivity(intent);
                     }
                     if (barcodeValue.getText().equals("00003")) {
                         //new activity - The Feast of the Goat
-                        System.out.println("The Feast of the Goat");
+                        Intent intent = new Intent(this, bookThreeActivity.class);
+                        startActivity(intent);
                     }
                     if (barcodeValue.getText().equals("00004")) {
                         //new activity - Games, Design and Play
-                        System.out.println("Games, Design and Play");
+                        Intent intent = new Intent(this, bookFourActivity.class);
+                        startActivity(intent);
                     }
                 }
 

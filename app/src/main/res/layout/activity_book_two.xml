@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="flipCard">
+    android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dip">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/book2cover" />
+
+
+            <android.widget.TextView
+                android:id="@+id/book_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title here" />
+
+
+
+            <android.widget.TextView
+                android:id="@+id/description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Placeholder author maybe?" />
+
+
+
+            <android.widget.TextView
+                android:id="@+id/lat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="another label" />
+
+
+
+            <android.widget.Button
+                android:id="@+id/learn_more_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="onButtonClick"
+                android:text="Learn More" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>
