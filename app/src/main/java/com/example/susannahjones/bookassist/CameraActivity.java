@@ -62,7 +62,7 @@ public class CameraActivity extends Activity implements View.OnClickListener {
                 if (data != null) {
                     Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     statusMessage.setText(R.string.barcode_success);
-                  //  barcodeValue.setText(barcode.displayValue);
+                    barcodeValue.setText(barcode.displayValue);
                     Log.d(TAG, "Barcode read: " + barcode.displayValue);
                     Log.d(TAG, "Barcode is: " + barcodeValue.getText());
                     if (barcodeValue.getText().equals("00001")) {

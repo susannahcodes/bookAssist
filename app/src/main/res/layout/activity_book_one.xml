@@ -2,10 +2,12 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="20dp"
+    android:gravity="center_horizontal">
 
 
     <ScrollView
@@ -33,7 +35,7 @@
                 android:id="@+id/book_name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Title here" />
+                android:text="The Game Design Reader: A Rules of Play Anthology" />
 
 
 
@@ -41,7 +43,7 @@
                 android:id="@+id/description_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Placeholder author maybe?" />
+                android:text="Author: Katie Salen" />
 
 
 
@@ -49,7 +51,7 @@
                 android:id="@+id/lat_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="another label" />
+                android:text="Goodreads: 4/5" />
 
 
 
