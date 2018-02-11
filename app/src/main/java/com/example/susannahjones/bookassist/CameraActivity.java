@@ -36,8 +36,7 @@ public class CameraActivity extends Activity implements View.OnClickListener {
 
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
-
-    //    findViewById(R.id.read_barcode).setOnClickListener(this);
+        findViewById(R.id.read_barcode).setOnClickListener(this);
     }
 
 
