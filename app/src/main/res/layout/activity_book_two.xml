@@ -17,12 +17,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:padding="10dip">
+            android:padding="25dip">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/book2cover" />
+                android:layout_width="wrap_content"
+                android:scaleType="fitCenter"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book2cover"
+                android:adjustViewBounds="true"
+                android:maxHeight="300dp"
+                android:minHeight="25dp"/>
 
 
             <android.widget.TextView
