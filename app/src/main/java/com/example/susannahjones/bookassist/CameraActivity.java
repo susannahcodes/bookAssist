@@ -57,13 +57,35 @@ public class CameraActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_BARCODE_CAPTURE) {
+            System.out.println("GAME DESIGN READER");
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     statusMessage.setText(R.string.barcode_success);
                     barcodeValue.setText(barcode.displayValue);
                     Log.d(TAG, "Barcode read: " + barcode.displayValue);
-                } else {
+                    Log.d(TAG, "Barcode is: " + barcodeValue.getText());
+                    if (barcodeValue.getText().equals("00001")) {
+                        //new activity - game design reader
+                        System.out.println("GAME DESIGN READER");
+                        Intent intent = new Intent(this, bookOneActivity.class);
+                        startActivity(intent);
+                    }
+                    if (barcodeValue.getText().equals("00002")) {
+                        //new activity - critical play
+                        System.out.println("critical play");
+                    }
+                    if (barcodeValue.getText().equals("00003")) {
+                        //new activity - The Feast of the Goat
+                        System.out.println("The Feast of the Goat");
+                    }
+                    if (barcodeValue.getText().equals("00004")) {
+                        //new activity - Games, Design and Play
+                        System.out.println("Games, Design and Play");
+                    }
+                }
+
+                else {
                     statusMessage.setText(R.string.barcode_failure);
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
@@ -72,8 +94,8 @@ public class CameraActivity extends Activity implements View.OnClickListener {
                         CommonStatusCodes.getStatusCodeString(resultCode)));
             }
         }
-        else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
+      //  else {
+        //    super.onActivityResult(requestCode, resultCode, data);
+       // }
     }
 }

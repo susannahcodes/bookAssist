@@ -24,6 +24,16 @@
         </activity>
         <activity android:name=".CameraActivity">
         </activity>
+        <activity android:name=".bookOneActivity">
+        </activity>
+        <activity android:name=".bookTwoActivity">
+        </activity>
+        <activity android:name=".bookThreeActivity">
+        </activity>
+        <activity android:name=".bookFourActivity">
+        </activity>
+
+
         <activity android:name=".BarcodeCaptureActivity"
             android:label="Read Barcode"/>
 
