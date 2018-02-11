@@ -17,11 +17,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:padding="25dip">
+            android:padding="25dp">
 
             <ImageView
                 android:layout_width="wrap_content"
+                android:scaleType="fitCenter"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:src="@drawable/book4cover"
                 android:adjustViewBounds="true"
                 android:maxHeight="300dp"
